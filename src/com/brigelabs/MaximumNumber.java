@@ -12,18 +12,21 @@ public class MaximumNumber {
     public static void main(String[] args) {
         System.out.println("Welcome to Generic program");
         getInputForInteger();
-        int maxInt = maxParameter(first, second, third,fourth);
-        System.out.println("maximum number is "+maxInt);
+        maxParameter(first, second, third, fourth);
         getInputForFloat();
-        float maxfloat = maxParameter(first1, second1, third1,fourth1);
-        System.out.println("Maximum number of float is "+maxfloat);
+        maxParameter(first1, second1, third1, fourth1);
         getInputForString();
-        String maxString = maxParameter(first2, second2, third2,fourth2);
-        System.out.println("Maximum string is "+maxString);
+        maxParameter(first2, second2, third2, fourth2);
     }
-    public static <T> T maxParameter(T ... a){
+
+    public static <T> void maxParameter(T... a) {
         Arrays.sort(a);
-        return a[a.length-1];
+        T max = a[a.length - 1];
+        printMax(max);
+    }
+
+    public static <E> void printMax(E a) {
+        System.out.println("Maximum is = " + a);
     }
 
     private static void getInputForString() {
