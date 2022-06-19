@@ -12,13 +12,13 @@ public class MaximumNumber {
         System.out.println("Welcome to Generic program");
         getInputForInteger();
         int maxInt = maximum(first, second, third);
-        System.out.println("Maximum Number is Integer " + maxInt);
+        System.out.println("maximum number is "+maxInt);
         getInputForFloat();
-        float maxFloat = maximum(first1, second1, third1);
-        System.out.println("Maximum Number is Float " + maxFloat);
+        float maxfloat = maximum(first1, second1, third1);
+        System.out.println("Maximum number of float is "+maxfloat);
         getInputForString();
         String maxString = maximum(first2, second2, third2);
-        System.out.println("Maximum Number is String " + maxString);
+        System.out.println("Maximum string is "+maxString);
     }
 
     public static <E extends Comparable> E maximum(E a, E b, E c) {
